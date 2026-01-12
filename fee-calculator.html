@@ -255,6 +255,7 @@
         <!-- Technical Chapter Membership -->
         <div class="form-group">
           <label>Do you have membership in any of these technical chapters? (Select only one) *</label>
+          <p style="margin: 8px 0 12px; color: #55616a; font-size: 14px;">Early Bird discount applies for payments made on or before 2026-01-17 (10%). Technical chapter members also get an additional 10% discount.</p>
           <div class="checkbox-group">
             <label>
               <input type="radio" name="membership" value="isampe" />
@@ -271,6 +272,22 @@
             <label>
               <input type="radio" name="membership" value="isnt" />
               ISNT (Indian Society for Non-Destructive Testing)
+            </label>
+            <label>
+              <input type="radio" name="membership" value="iucee-ewb" />
+              IUCEE-EWB (Indo Universal Collaboration for Engineering Education / Engineers Without Borders)
+            </label>
+            <label>
+              <input type="radio" name="membership" value="iete" />
+              IETE (Institution of Electronics and Telecommunication Engineers)
+            </label>
+            <label>
+              <input type="radio" name="membership" value="iste" />
+              ISTE (Indian Society for Technical Education)
+            </label>
+            <label>
+              <input type="radio" name="membership" value="csi" />
+              CSI (Computer Society of India)
             </label>
             <label style="margin-top: 8px; padding-top: 8px; border-top: 1px solid #e1e8e3;">
               <input type="radio" name="membership" value="none" checked />
@@ -485,8 +502,8 @@
           return;
         }
 
-        // Check early bird discount (on or before Jan 15, 2026)
-        const earlyBirdDeadline = new Date('2026-01-15');
+        // Check early bird discount (on or before Jan 17, 2026)
+        const earlyBirdDeadline = new Date('2026-01-17');
         const isEarlyBird = registrationDate <= earlyBirdDeadline;
 
         // Calculate discounts
